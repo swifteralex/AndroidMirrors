@@ -2,6 +2,7 @@ package com.swifteralex.mirrors;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -9,6 +10,8 @@ import android.os.Bundle;
 import android.os.CancellationSignal;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,9 +19,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
-        LinearLayout myLayout = new LinearLayout(this);
+        setContentView(R.layout.main_menu);
+
+        /*LinearLayout myLayout = new LinearLayout(this);
 
         DrawView drawnLasers = new DrawView(this);
         drawnLasers.setBackgroundColor(Color.WHITE);
@@ -30,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(myLayout);
 
-        drawnLasers.draw(new Canvas());
+        drawnLasers.draw(new Canvas());*/
     }
 }
 

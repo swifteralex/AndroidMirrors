@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mirrors</string>
+    <string name="menu_background">Menu background image</string>
 </resources>
