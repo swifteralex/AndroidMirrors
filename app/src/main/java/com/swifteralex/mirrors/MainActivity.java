@@ -1,24 +1,18 @@
 package com.swifteralex.mirrors;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Context;
 import android.content.pm.ActivityInfo;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Matrix;
-import android.graphics.Paint;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
     private static float rayAngle = 0;
+    ImageView rays;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_main);
 
+        rays = findViewById(R.id.imageView2);
         Timer timer = new Timer();
         final int FPS = 60;
         TimerTask updateFrame = new RotateRays();
@@ -36,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
     public class RotateRays extends TimerTask {
         public void run(){
-            ImageView rays = findViewById(R.id.imageView2);
             rays.setRotation(rayAngle += 0.06f);
         }
     }
