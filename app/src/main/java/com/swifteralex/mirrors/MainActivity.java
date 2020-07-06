@@ -11,8 +11,8 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static float rayAngle = 0;
-    ImageView rays;
+    private float rayAngle = 0;
+    private ImageView rays;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
