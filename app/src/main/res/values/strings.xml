@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Mirrors</string>
-    <string name="menu_background">Menu background image</string>
+    <string name="menu_img">Menu background image</string>
+    <string name="menu_button">Menu button</string>
     <string name="menu_level_select">Level Select</string>
     <string name="menu_sandbox">Sandbox</string>
-    <string name="menu_exit">Exit</string>
+    <string name="menu_credits">Credits</string>
 </resources>

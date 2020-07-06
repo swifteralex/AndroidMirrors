@@ -7,25 +7,52 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/menu_img"
         android:scaleType="centerCrop"
-        android:contentDescription="@string/menu_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/mirrors_menu_background" />
+        app:srcCompat="@drawable/mirrors_background" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="10000dp"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/menu_img"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rays" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/menu_img"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/mirrors_title" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="156dp"
         android:layout_height="42dp"
         android:background="#86C0E0"
-        android:contentDescription="@string/menu_level_select"
+        android:contentDescription="@string/menu_button"
         android:fontFamily="@font/convergence"
         android:text="@string/menu_level_select"
         android:textAllCaps="false"
@@ -33,9 +60,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.50" />
 
     <Button
         android:id="@+id/button2"
@@ -43,7 +71,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
         android:background="#86C0E0"
-        android:contentDescription="@string/menu_sandbox"
+        android:contentDescription="@string/menu_button"
         android:fontFamily="@font/convergence"
         android:text="@string/menu_sandbox"
         android:textAllCaps="false"
@@ -51,7 +79,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintVertical_bias="0.0" />
@@ -62,15 +90,15 @@
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
         android:background="#86C0E0"
-        android:contentDescription="@string/menu_exit"
+        android:contentDescription="@string/menu_button"
         android:fontFamily="@font/convergence"
-        android:text="@string/menu_exit"
+        android:text="@string/menu_credits"
         android:textAllCaps="false"
         android:textColor="#4C7E99"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2"
         app:layout_constraintVertical_bias="0.0" />
