@@ -1,8 +1,11 @@
 package com.swifteralex.mirrors;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -29,8 +32,13 @@ public class MainActivity extends AppCompatActivity {
         timer.scheduleAtFixedRate(updateFrame, 0, 1000/FPS);
     }
 
+    public void levelSelectClicked(View view) {
+        Intent intent = new Intent(this, LevelSelectActivity.class);
+        startActivity(intent);
+    }
+
     public class RotateRays extends TimerTask {
-        public void run(){
+        public void run() {
             rays.setRotation(rayAngle += 0.06f);
         }
     }

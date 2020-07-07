@@ -54,6 +54,7 @@
         android:background="#86C0E0"
         android:contentDescription="@string/menu_button"
         android:fontFamily="@font/convergence"
+        android:onClick="levelSelectClicked"
         android:text="@string/menu_level_select"
         android:textAllCaps="false"
         android:textColor="#4C7E99"
