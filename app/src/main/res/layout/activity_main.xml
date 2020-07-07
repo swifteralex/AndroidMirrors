@@ -49,9 +49,10 @@
 
     <Button
         android:id="@+id/button"
+        style="@android:style/Widget.Material.Button.Borderless"
         android:layout_width="156dp"
         android:layout_height="42dp"
-        android:background="#86C0E0"
+        android:background="@drawable/button_selector"
         android:contentDescription="@string/menu_button"
         android:fontFamily="@font/convergence"
         android:onClick="levelSelectClicked"
@@ -68,10 +69,11 @@
 
     <Button
         android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="156dp"
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
-        android:background="#86C0E0"
+        android:background="@drawable/mirrors_button_background"
         android:contentDescription="@string/menu_button"
         android:fontFamily="@font/convergence"
         android:text="@string/menu_sandbox"
@@ -87,10 +89,11 @@
 
     <Button
         android:id="@+id/button3"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="156dp"
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
-        android:background="#86C0E0"
+        android:background="@drawable/mirrors_button_background"
         android:contentDescription="@string/menu_button"
         android:fontFamily="@font/convergence"
         android:text="@string/menu_credits"
