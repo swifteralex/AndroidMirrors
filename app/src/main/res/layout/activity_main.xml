@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/mirrors_background" />
+        app:srcCompat="@drawable/background" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -45,7 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/mirrors_title" />
+        app:srcCompat="@drawable/title" />
 
     <Button
         android:id="@+id/button"
