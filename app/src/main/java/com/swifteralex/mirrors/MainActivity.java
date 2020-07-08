@@ -8,15 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageView;
-import java.util.Timer;
-import java.util.TimerTask;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 
 public class MainActivity extends AppCompatActivity {
-
-    private float rayAngle = 0;
-    private ImageView rays;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,22 +22,18 @@ public class MainActivity extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_main);
 
-        rays = findViewById(R.id.imageView2);
-        Timer timer = new Timer();
-        final int FPS = 60;
-        TimerTask updateFrame = new RotateRays();
-        timer.scheduleAtFixedRate(updateFrame, 0, 1000/FPS);
+        RotateAnimation rotateAnimation = new RotateAnimation(0, 360f,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f);
+        rotateAnimation.setInterpolator(new LinearInterpolator());
+        rotateAnimation.setDuration(50000);
+        rotateAnimation.setRepeatCount(Animation.INFINITE);
+        findViewById(R.id.imageView2).startAnimation(rotateAnimation);
     }
 
     public void levelSelectClicked(View view) {
         Intent intent = new Intent(this, LevelSelectActivity.class);
         startActivity(intent);
-    }
-
-    public class RotateRays extends TimerTask {
-        public void run() {
-            rays.setRotation(rayAngle += 0.06f);
-        }
     }
 }
 
