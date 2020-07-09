@@ -2,9 +2,9 @@
     <string name="app_name">Mirrors</string>
     <string name="menu_img">Menu background image</string>
     <string name="menu_button">Menu button</string>
-    <string name="menu_level_select">Level Select</string>
-    <string name="menu_sandbox">Sandbox</string>
-    <string name="menu_credits">Credits</string>
+    <string name="level_select">Level Select</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="credits">Credits</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
     <string name="_3">3</string>
